@@ -28,7 +28,7 @@ const translations = {
 };
 
 export default function ConcernBoxForm() {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState<"en" | "de">("en");
   const [anonymous, setAnonymous] = useState(true);
   const t = translations[language];
 
