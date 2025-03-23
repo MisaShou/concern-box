@@ -45,7 +45,7 @@ export default function ConcernBoxForm() {
         <label className="block text-sm font-medium text-gray-800">{t.language}</label>
         <select
           value={language}
-          onChange={(e) => setLanguage(e.target.value)}
+          onChange={(e) => setLanguage(e.target.value as "en" | "de")}
           className="w-full p-2 border rounded"
         >
           <option value="en">English</option>
