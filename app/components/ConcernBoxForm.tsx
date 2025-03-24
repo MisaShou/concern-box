@@ -54,10 +54,7 @@ export default function ConcernBoxForm() {
 
         {/* Topic Selection */}
         <label className="block text-sm font-medium text-gray-800">{t.topicLabel}</label>
-        <select
-          name="topic"
-          className="w-full p-2 border rounded"
-        >
+        <select name="topic" className="w-full p-2 border rounded">
           {t.topics.map((topic, index) => (
             <option key={index} value={topic.toLowerCase()}>
               {topic}
@@ -74,7 +71,7 @@ export default function ConcernBoxForm() {
           required
         />
 
-        {/* Anonymous Switch */}
+        {/* Anonymous Toggle */}
         <div className="flex items-center justify-between">
           <span className="font-medium text-gray-800">{t.anonymousLabel}</span>
           <input
