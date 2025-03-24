@@ -33,7 +33,7 @@ export default function ConcernBoxForm() {
   const t = translations[language];
 
   return (
-    <div className="max-w-xl mx-auto mt-10 p-6 bg-white rounded-xl shadow-lg">
+    <div className="max-w-xl mx-auto mt-10 p-6 bg-white/90 rounded-xl shadow-lg backdrop-blur-md">
       <h2 className="text-2xl font-bold text-green-600 mb-4">{t.title}</h2>
 
       <form
