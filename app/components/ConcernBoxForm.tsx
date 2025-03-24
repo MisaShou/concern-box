@@ -33,7 +33,7 @@ export default function ConcernBoxForm() {
   const t = translations[language];
 
   return (
-    <div className="max-w-xl mx-auto mt-10 p-6 bg-white/90 rounded-xl shadow-lg backdrop-blur-md">
+    <div className="max-w-xl mx-auto mt-10 p-6 bg-white bg-opacity-90 rounded-xl shadow-lg">
       <h2 className="text-2xl font-bold text-green-600 mb-4">{t.title}</h2>
 
       <form
@@ -46,7 +46,7 @@ export default function ConcernBoxForm() {
         <select
           value={language}
           onChange={(e) => setLanguage(e.target.value as "en" | "de")}
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded bg-white text-black placeholder-gray-600"
         >
           <option value="en">English</option>
           <option value="de">Deutsch</option>
@@ -54,7 +54,7 @@ export default function ConcernBoxForm() {
 
         {/* Topic Selection */}
         <label className="block text-sm font-medium text-gray-800">{t.topicLabel}</label>
-        <select name="topic" className="w-full p-2 border rounded">
+        <select name="topic" className="w-full p-2 border rounded bg-white text-black placeholder-gray-600">
           {t.topics.map((topic, index) => (
             <option key={index} value={topic.toLowerCase()}>
               {topic}
@@ -67,7 +67,7 @@ export default function ConcernBoxForm() {
         <textarea
           name="message"
           placeholder={t.messagePlaceholder}
-          className="w-full p-2 border rounded min-h-[100px]"
+          className="w-full p-2 border rounded min-h-[100px] bg-white text-black placeholder-gray-600"
           required
         />
 
@@ -89,13 +89,13 @@ export default function ConcernBoxForm() {
               name="name"
               type="text"
               placeholder={t.namePlaceholder}
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded bg-white text-black placeholder-gray-600"
             />
             <input
               name="contact"
               type="text"
               placeholder={t.contactPlaceholder}
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded bg-white text-black placeholder-gray-600"
             />
           </>
         )}
